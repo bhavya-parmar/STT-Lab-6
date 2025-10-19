@@ -4,7 +4,7 @@ By Bhavya Parmar (23110059)
 
 ## Overview
 
-This project evaluates multiple vulnerability analysis tools using a CWE-based comparison. It aims to assess how well different tools detect and report software vulnerabilities, referencing the Common Weakness Enumeration (CWE) framework.
+This repository evaluates multiple vulnerability analysis tools using a CWE-based comparison. It aims to assess how well different tools detect and report software vulnerabilities, referencing the Common Weakness Enumeration (CWE) framework.
 
 ## Directory Structure
 
@@ -20,15 +20,6 @@ This project evaluates multiple vulnerability analysis tools using a CWE-based c
 - `codeql.sh`, `semgrep.ipynb`, `snyk.sh`  
   Scripts and notebooks for running CodeQL, Semgrep, and Snyk scans.
 
-- `agno/`  
-  Contains the Agno framework and related cookbooks, libraries, scripts, and database integrations.
-
-- `altair/`  
-  Vega-Altair visualization library and related documentation.
-
-- `androguard/`  
-  Androguard tool for Android application analysis.
-
 - `logs/`  
   Directory for storing scan logs and outputs of each tool.
 
@@ -39,11 +30,20 @@ This project evaluates multiple vulnerability analysis tools using a CWE-based c
    git clone <repo-url>
    cd STT-Lab-6
    ```
-2. **Run vulnerability scans:**
+2. **Clone Repositories to be Analyzed:**
+    ```sh
+    git clone <repo-url>
+    ```
+    I have used the following the repositories:
+   - [Agno](https://github.com/agno-agi/agno)
+   - [Altair](https://github.com/vega/altair)
+   - [Androguard](https://github.com/androguard/androguard)
+
+3. **Run vulnerability scans:**
    Execute the provided scripts for each tool: `codeql.sh`, `semgrep.ipynb`, and `snyk.sh` to generate scan results.
 
-3. **Parse and consolidate results:**
+4. **Parse and consolidate results:**
    Use `parse_convert.py` to merge the outputs into `consolidated_csv.csv`.
 
-4. **Analyze results:**
+5. **Analyze results:**
    Open `analysis.ipynb` in Jupyter Notebook to visualize and analyze the consolidated data.
