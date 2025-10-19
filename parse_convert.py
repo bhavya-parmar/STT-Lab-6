@@ -116,7 +116,7 @@ def gather_logs(logs_path: Path):
 
 def main():
     logs_path = Path("logs")  # Automatically traverse the logs folder
-    out_path = Path("consolidated_cwe.csv")
+    out_path = Path("consolidated_csv.csv")
 
     top25 = [
         "CWE-79", "CWE-787", "CWE-89", "CWE-352", "CWE-22", "CWE-125", "CWE-78", "CWE-416",
